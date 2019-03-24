@@ -6,12 +6,14 @@ class MaxHeap {
 
 		this.root = null;
 		this.parentNodes = [];
-
 	}
 
 	push(data, priority) {
 
-		insertNode.call(new Node(data, priority));
+		let node = new Node(data, priority);
+
+		this.insertNode(node);
+		this.shiftNodeUp(node);
 		
 	}
 
@@ -48,21 +50,19 @@ class MaxHeap {
 
 	clear() { //it's work
 
-		if (this.root !== null || this.parentNodes.length !== 0) {
-			this.root = null;
-			this.parentNodes = [];
-			return this;
-		}
+		// if (this.root !== null || this.parentNodes.length !== 0) {
+		// 	this.root = null;
+		// 	this.parentNodes = [];
+		// 	return this;
+		// }
 	}
 
 	insertNode(node) {
 
-		if (isEmpty(node) == 0) {
+		if (!!isEmpty()) {
 
-			let node = new Node(data. priority);
 			return this.root = node;
 		}
-		
 	}
 
 	shiftNodeUp(node) {
